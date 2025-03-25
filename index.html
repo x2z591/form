@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+</head>
+<body>
+
+    <h2>Formulaire</h2>
+
+    <form>
+        <!-- Prénom -->
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" pattern="[A-Za-zÀ-ÿéèêàùîôùïäëöü]+([ -]?[A-Za-zÀ-ÿéèêàùîôùïäëöü]+)*" required placeholder="Votre prénom"><br>
+        <!-- Nom -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required placeholder="Votre nom"><br>
+        <!-- Age -->
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" required min="0" placeholder="Votre âge"><br>
+        <!-- Sexe -->
+        <label for="sexe">Sexe :</label>
+        <select id="sexe" name="sexe" required>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+        </select><br>
+        <!-- Adresse Mail -->
+        <label for="email">Adresse Mail :</label>
+        <input type="email" id="email" name="email" required placeholder="Votre email"><br>
+        <!-- Adresse Postale -->
+        <label for="adresse">Adresse Postale :</label>
+        <input type="text" id="adresse" name="adresse" required placeholder="Votre adresse postale"><br>
+        <!-- Code Postal -->
+        <label for="code">Code Postal :</label>
+        <input type="text" id="code" name="code" placeholder="code postal" pattern="\d{5}" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required><br>
+        <!-- Ville -->
+        <label for="ville">Ville :</label>
+        <input type="text" id="ville" name="ville" required placeholder="Votre ville"><br>
+        <!-- Métier Exerçé -->
+        <label for="metier">Métier Exercé :</label>
+        <input type="text" id="metier" name="metier" required placeholder="Votre métier"><br>
+        <!-- Nationalité -->
+        <label for="nationalite">Nationalité :</label>
+        <input type="text" id="nationalite" name="nationalite" required placeholder="Votre nationalité"><br>
+        <!-- Date de Naissance -->
+        <label for="date_naissance">Date de Naissance :</label>
+        <input type="date" id="date_naissance" name="date_naissance" required><br>
+        <!-- Pays de Naissance -->
+        <label for="pays_naissance">Pays de Naissance :</label>
+        <input type="text" id="pays_naissance" name="pays_naissance" required placeholder="Pays de naissance"><br>
+        <!-- Numéro de Sécurité Sociale -->
+        <label for="num_securite_sociale">Numéro de Sécurité Sociale :</label>
+        <input type="text" id="numsec" name="numsec" placeholder="Numéro de sécurité sociale" pattern="\d{10}" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required><br>
+        <!-- Numéro de Passeport -->
+        <label for="numpass">Numéro de Passeport :</label>
+        <input type="text" id="numpass" name="numpass" required placeholder="Numéro de passeport" pattern="\d{10}" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required><br>
+        <!-- Date de Délivrance du Passeport -->
+        <label for="datedev">Date de Délivrance du Passeport :</label>
+        <input type="date" id="datedev" name="datedev" required><br>
+        <!-- Date de Validité du Passeport -->
+        <label for="dateval">Date de Validité du Passeport :</label>
+        <input type="date" id="dateval" name="dateval" required><br>
+        <!-- Bouton de soumission -->
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
